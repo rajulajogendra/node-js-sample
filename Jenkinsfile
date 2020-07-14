@@ -8,8 +8,11 @@ pipeline {
          }
     stage('Build') {
       steps {
-        sh 'npm config ls'
-        sh 'npm pack'
+        sh '''
+        npm install
+        zip -r sample.zip ./*
+        
+        '''
               }
       }
         }
