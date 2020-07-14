@@ -15,7 +15,7 @@ pipeline {
         '''
               }
       stage('lambda')
-      steps{
+      steps {
         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'ed10dcb8-44af-46dd-90cc-6c368d564a97', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
       sh '''
        aws iam create-role --role-name lambda-ex --assume-role-policy-document file://trust-policy.json
