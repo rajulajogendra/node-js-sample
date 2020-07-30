@@ -12,7 +12,7 @@ pipeline {
          steps{
             sh '''
             npm install 
-            zip -r masterfile.zip ./*
+            zip -r developfile.zip ./*
             '''
          }
       }
